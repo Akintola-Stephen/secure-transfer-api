@@ -1,12 +1,23 @@
 {
   "name": "secure-transfer-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Secure wallet transfer API with idempotency and ledger-based accounting",
+  "main": "dist/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "start": "node dist/server.js",
+    "test": "jest --coverage",
+    "lint": "echo \"No lint configured\""
   },
-  "keywords": [],
+  "keywords": [
+    "secure",
+    "wallet",
+    "transfer",
+    "typescript",
+    "sequelize",
+    "postgres"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
