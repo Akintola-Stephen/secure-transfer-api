@@ -1,0 +1,29 @@
+# Dependencies
+node_modules
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Production
+/build
+
+# Environment files
+.env
+.env*.local
+.vercel
+.netlify
+netlify.toml
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.user
+*.casync
+.history
+
+# System Files
+.DS_Store
+Thumbs.db
