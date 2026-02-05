@@ -3,6 +3,7 @@ import { LedgerEntry } from "../models/LedgerEntry";
 import { withIdempotency } from "../utils/withIdempotency";
 import { getWalletBalance } from "../utils/getWalletBalance";
 import { TransactionLogRepository } from "../repositories/TransactionLogRepository";
+import { Wallet } from "../models/Wallet";
 
 interface TransferInput {
     fromWalletId: string;
@@ -23,6 +24,10 @@ export class TransferService {
                         tx
                     );
 
+                    await Wallet.findByPk(input.fromWalletId, {
+                        transaction: tx,
+                        lock: tx.LOCK.UPDATE,
+                    });
 
                     const balance = await getWalletBalance(input.fromWalletId);
 
