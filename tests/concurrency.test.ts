@@ -10,7 +10,7 @@ describe("Concurrency safety", () => {
                 .send({
                     fromWalletId: "11111111-1111-1111-1111-111111111111",
                     toWalletId: "22222222-2222-2222-2222-222222222222",
-                    amount: 10000,
+                    amount: 5000,
                 })
         );
 

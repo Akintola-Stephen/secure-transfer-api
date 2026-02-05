@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES2021",
-    "module": "commonjs",
-    "rootDir": "src",
-    "outDir": "dist",
+    "target": "esnext",
+    "module": "nodenext",
+    "rootDir": ".",
+    "outDir": "./dist",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+    "isolatedModules": true
+  },
+  "include": ["src", "tests"],
+  "exclude": ["node_modules", "dist"]
 }

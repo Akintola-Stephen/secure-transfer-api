@@ -18,6 +18,7 @@ LedgerEntry.init(
         walletId: {
             type: DataTypes.UUID,
             allowNull: false,
+            field: "wallet_id",
         },
         amount: {
             type: DataTypes.DECIMAL(18, 2),
@@ -25,8 +26,8 @@ LedgerEntry.init(
             comment: "Positive = credit, Negative = debit",
         },
         reference: {
-            type: DataTypes.UUID,
-            allowNull: false,
+            type: DataTypes.STRING(255),
+            allowNull: true,
             comment: "TransactionLog ID",
         },
     },

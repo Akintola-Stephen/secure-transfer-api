@@ -25,7 +25,7 @@ describe("POST /transfer", () => {
         const debit = entries.find(e => Number(e.amount) < 0);
         const credit = entries.find(e => Number(e.amount) > 0);
 
-        expect(debit?.amount).toBe(-1000);
-        expect(credit?.amount).toBe(1000);
+        expect(Number(debit?.amount)).toBe(-1000);
+        expect(Number(credit?.amount)).toBe(1000);
     });
 });

@@ -15,16 +15,17 @@ async function seed() {
 
     await LedgerEntry.bulkCreate([
         {
-            walletId: walletA.id,
-            amount: 100000,
+            walletId: "11111111-1111-1111-1111-111111111111",
+            amount: 500,
             reference: "INITIAL_FUNDING",
         },
         {
-            walletId: walletB.id,
-            amount: 50000,
+            walletId: "22222222-2222-2222-2222-222222222222",
+            amount: 500,
             reference: "INITIAL_FUNDING",
         },
     ]);
+
 
     console.log("Seed complete");
     process.exit(0);
